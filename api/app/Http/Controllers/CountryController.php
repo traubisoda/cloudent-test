@@ -16,7 +16,7 @@ class CountryController extends Controller
      */
     public function index()
     {
-        return CountryResource::collection(Country::all());
+        return CountryResource::collection(Country::with('cities')->get());
     }
 
     /**
